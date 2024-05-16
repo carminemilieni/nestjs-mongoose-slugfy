@@ -6,7 +6,7 @@ export class MongooseSlugfyClass {
     return new MongooseSlugfyClass();
   }
 
-  slugOf(value: string, opts?: MongooseSlugfyOptsInterface) {
-    slugify.default(value, opts);
+  slugOf(value: string, opts?: MongooseSlugfyOptsInterface): string {
+    return slugify.default(value, opts);
   }
 }
