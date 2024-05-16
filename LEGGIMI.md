@@ -6,58 +6,58 @@
 
 # nestjs-mongoose-slugfy
 
-⭐️ Add a star on GitHub: it motivates me a lot!
+⭐️ Aggiungi una stella su GitHub: mi motiva molto!
 
-> Generate unique slugs for your NestJS/Mongoose documents. This module uses slugify to generate slugs.
+> Genera slug univoci per i tuoi documenti NestJS/Mongoose. Questo modulo usa slugify per generare slug.
 
-## Prerequisites
+## Pre-requisiti
 
-This project was developed
-using NodeJS v20.9.0, NPM v10.1.0 or Yarn v1.22.22 and NestJS v10.0.0.
+Questo progetto è stato sviluppato
+utilizzando NodeJS v20.9.0, NPM v10.1.0 o Yarn v1.22.22 e NestJS v10.0.0.
 
 - [Node](http://nodejs.org/) (v20.9.0)
 - [NPM](https://npmjs.org/) (v10.1.0)
 - [YARN](https://yarnpkg.com/) (v1.22.22)
 - [NestJS](https://nestjs.com/) (v10.0.0)
 
-Project dependencies:
+Dipendenze di progetto:
 
 - @nestjs/mongoose: ^10.0.4
 - mongoose: ^8.2.3
 - slugify: ^1.6.6
 
-I do not guarantee backward compatibility with previous versions of NodeJS and NPM.
-Any requests are welcome.
+Non garantisco la retro-compatibilità con versioni precedenti di NodeJS e NPM.
+Eventuali richieste sono ben accette.
 
-## Summary
+## Sommario
 
-- [Installation](#installation)
-- [Usage](#usage)
-    - [In your service](#in-your-service)
-    - [Non-unique slugs](#non-unique-slugs)
-    - [Parameters](#parameters)
-- [Next steps](#next-steps)
-- [License](#license)
+- [Installazione](#installazione)
+- [Utilizzo](#utilizzo)
+    - [Nel tuo service](#nel-tuo-service)
+    - [Slug non univoci](#slug-non-univoci)
+    - [Parametri](#parametri)
+- [Prossimi passi](#prossimi-passi)
+- [Licenza](#licenza)
 
-## Installation
+## Installazione
 
-**BEFORE INSTALLING:** please read the [prerequisites](#prerequisites)
+**PRIMA DI INSTALLARE:** per favore leggi i [pre-requisiti](#pre-requisiti)
 
-Depending on the package manager you prefer, you can install the library with npm or yarn.
+A seconda del package manager che preferisci, puoi installare la libreria con npm o yarn.
 
 ```shell
 npm install -S nestjs-mongoose-slufy
 ```
 
-Or if you prefer to use Yarn:
+Oppure se preferisci usare Yarn:
 
 ```shell
 yarn add nestjs-mongoose-slugfy
 ```
 
-## Usage
+## Utilizzo
 
-### In your service
+### Nel tuo service
 
 ```ts
 // ...
@@ -94,16 +94,16 @@ export class ExampleService {
 }
 ```
 
-### Non-unique slugs
+### Slug non univoci
 
-nestjs-mongoose-slugfy also exports:
+nestjs-mongoose-slugfy esporta anche:
 
 `import { MongooseSlugfyClass } from 'nestjs-mongoose-slugfy';`
 
-for generating non-unique slugs.
-In this case, it is not necessary to pass the field to compare.
+per la generazione di slug non univoci.
+In questo caso, non è necessario passare il campo da confrontare.
 
-Example:
+Esempio:
 
 ```ts
 import { MongooseSlugfyClass, MongooseUniqueSlugfyClass } from 'nestjs-mongoose-slugfy';
@@ -115,12 +115,12 @@ const slug = await slugfy.slugOf('my text', {
 });
 ```
 
-### Parameters
+### Parametri
 
-The slugOf method accepts the following parameters:
+Il metodo `slugOf` accetta i seguenti parametri:
 
-1. `text`: the text to transform into a slug (required)
-2. An interface with the following parameters (optional)
+1. `text`: il testo da trasformare in slug (obbligatorio)
+2. Un interfaccia con i seguenti parametri (opzionale):
 
 ```ts
 export interface MongooseSlugfyOptsInterface {
@@ -133,10 +133,10 @@ export interface MongooseSlugfyOptsInterface {
 }
 ```
 
-The slugUniqueOf method accepts the following parameters:
+Il metodo `slugUniqueOf` accetta i seguenti parametri:
 
-1. `text`: the text to transform into a slug (required)
-2. An interface with the following parameters (required):
+1. `text`: il testo da trasformare in slug (obbligatorio)
+2. Un interfaccia con i seguenti parametri (obbligatorio):
 
 ```ts
 export interface MongooseUniqueSlugfyOptsInterface {
@@ -150,13 +150,13 @@ export interface MongooseUniqueSlugfyOptsInterface {
 }
 ```
 
-you can have more information about these parameters [here](https://www.npmjs.com/package/slugify).
+puoi avere ulteriori informazioni su questi parametri [qui](https://www.npmjs.com/package/slugify).
 
-### Next steps
+### Prossimi passi
 
-Offer tools for updating documents and managing existing slugs.
+Offrire strumenti per l'update dei documenti e la gestione di slug già esistenti.
 
-## License
+## Licenza
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
 This work is distributed under a License <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative

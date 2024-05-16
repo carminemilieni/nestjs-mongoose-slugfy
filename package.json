@@ -1,7 +1,7 @@
 {
   "name": "nestjs-mongoose-slugfy",
   "version": "0.0.1",
-  "description": "A helper for create unique slug with nestjs and mongoose",
+  "description": "Generate unique slugs for your NestJSMongoose documents. This module uses slugify to generate slugs.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "repository": "https://github.com/carminemilieni/nestjs-mongoose-slugfy",
